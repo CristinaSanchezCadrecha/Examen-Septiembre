@@ -1,0 +1,32 @@
+package Ejercicio2;
+
+public class Revistas extends Publicaciones {
+	private int numSerie;
+	private int mes;
+	private int diaPublicacion;
+
+	public Revistas(int codigo, String titulo, int añoPublicacion, int numSerie, int mes, int diaPublicacion) {
+		super(codigo, titulo, añoPublicacion);
+
+		this.numSerie = numSerie;
+		this.mes = mes;
+		this.diaPublicacion = diaPublicacion;
+	}
+
+	public int getNumSerie() {
+		return numSerie;
+	}
+
+	public int getMes() {
+		return mes;
+	}
+
+	public int getDiaPublicacion() {
+		return diaPublicacion;
+	}
+
+	public String toString() {
+		return "revistas" + super.toString();
+	}
+
+}
