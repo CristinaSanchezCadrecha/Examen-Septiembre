@@ -1,0 +1,21 @@
+package examen.ejercicio3;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import Ejercicio2.Publicaciones;
+
+public class Ejercicio3 {
+	public static void main(String[] args) {
+		List<Publicaciones> publicacion = new ArrayList<>();
+
+		Collections.sort((List<T>) publicacion);
+		guardarFicheroTexto(publicacion);
+
+	}
+
+	private static void guardarFicheroTexto(List<Publicaciones> publicacion) {
+
+	}
+}
