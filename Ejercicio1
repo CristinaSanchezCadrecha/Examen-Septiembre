@@ -1,0 +1,76 @@
+package examen.ejercicio1;
+
+public class Automovil {
+	private String modelo;
+	private float capacidadDeposito;
+	private float cantidadLitrosDeposito;
+	private float consumoKm;
+	private float totalKmsRecorridos;
+	private float totalConsumoCombustible;
+	
+	public Automovil(String modelo, float capacidadDeposito, float cantidadLitrosDeposito, float consumoKm) {
+		this.modelo=modelo;
+		this.capacidadDeposito=capacidadDeposito;
+		this.cantidadLitrosDeposito=cantidadLitrosDeposito;
+		this.consumoKm=consumoKm;
+	}
+	public Automovil(String modelo, float capacidadDeposito, float consumoKm) {
+		this.modelo=modelo;
+		cantidadLitrosDeposito=this.capacidadDeposito =capacidadDeposito;
+		this.consumoKm=consumoKm;
+	}
+	
+	public void llenadoDeposito() {
+		cantidadLitrosDeposito=capacidadDeposito;
+	}
+	public float llenardoDeposito(float litros) {
+		if (litros<=0)
+			return 0;
+		float sobrante =0;
+		cantidadLitrosDeposito += litros;
+		if (cantidadLitrosDeposito> capacidadDeposito) {
+			sobrante = cantidadLitrosDeposito - capacidadDeposito;
+			cantidadLitrosDeposito = capacidadDeposito;
+		}
+		return sobrante;
+	}
+	public float desplazar(float kms) {
+		float consumo = kms * consumoKm;
+		if (consumo > cantidadLitrosDeposito)
+			return 0;
+		totalKmsRecorridos +=kms;
+		totalConsumoCombustible +=consumo;
+		cantidadLitrosDeposito -=consumo;
+		return consumo;
+	}
+	public String getModelo() {
+		return modelo;
+	}
+
+	public float getCapacidadDeposito() {
+		return capacidadDeposito;
+	}
+	public float getLitrosDeposito() {
+		return cantidadLitrosDeposito;
+	}
+
+	public float getConsumoKm() {
+		return consumoKm;
+	}
+
+	public float getTotalKms() {
+		return totalKmsRecorridos;
+	}
+
+	public float getTotalConsumo() {
+		return totalConsumoCombustible;
+	}
+	
+	public void reset() {
+		totalConsumoCombustible=totalKmsRecorridos= 0;
+	}
+	
+		
+
+	}
+
