@@ -1,0 +1,26 @@
+package Ejercicio2;
+
+public class Libros extends Publicaciones {
+	private String nombreAutor;
+	private String editorial;
+
+	public Libros(int codigo,String titulo,int añoPublicacion,String nombreAutor,String editorial) {
+		super(codigo, titulo, añoPublicacion);
+		
+		this.nombreAutor=nombreAutor;
+		this.editorial=editorial;
+	}
+	public String getNombreAutor() {
+		return nombreAutor;
+	}
+	public String getEditorial() {
+		return editorial;
+	}
+	
+	public String toString() {
+		return "libro" + super.toString();
+	}
+	
+	
+
+}
